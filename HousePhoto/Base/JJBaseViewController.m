@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.dataSource = [NSMutableArray array];
-    
+    self.requestPage = 1;
 }
 
 #pragma mark -  MJRefresh
@@ -28,7 +28,7 @@
     JJMJRefreshNoMoreDataFooter *knbFooter = [JJMJRefreshNoMoreDataFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     [knbFooter setImage:nomoImage];
     self.tableView.mj_footer = knbFooter;
-    
+    self.footerCompleteBlock = completeBlock;
 }
 
 - (void)loadMoreData {
@@ -36,6 +36,7 @@
     if (self.footerCompleteBlock) {
         self.footerCompleteBlock(self.requestPage);
     }
+    
 }
 
 - (void)requestSuccess:(BOOL)success requestEnd:(BOOL)end {

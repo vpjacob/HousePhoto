@@ -51,6 +51,7 @@
 		D62AAF811FC56B8900662628 /* JJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62AAF801FC56B8900662628 /* JJHomeViewController.m */; };
 		D62AAF841FC56B9300662628 /* JJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62AAF831FC56B9300662628 /* JJMeViewController.m */; };
 		D62AAF871FC57BB800662628 /* JJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62AAF861FC57BB800662628 /* JJBaseViewController.m */; };
+		D64E833D1FCBA8DE0057F94A /* JJHomeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D64E833C1FCBA8DE0057F94A /* JJHomeApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +145,8 @@
 		D62AAF831FC56B9300662628 /* JJMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJMeViewController.m; sourceTree = "<group>"; };
 		D62AAF851FC57BB800662628 /* JJBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJBaseViewController.h; sourceTree = "<group>"; };
 		D62AAF861FC57BB800662628 /* JJBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJBaseViewController.m; sourceTree = "<group>"; };
+		D64E833B1FCBA8DE0057F94A /* JJHomeApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJHomeApi.h; sourceTree = "<group>"; };
+		D64E833C1FCBA8DE0057F94A /* JJHomeApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJHomeApi.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -508,6 +511,8 @@
 		D62AAF7C1FC56B5B00662628 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D64E833B1FCBA8DE0057F94A /* JJHomeApi.h */,
+				D64E833C1FCBA8DE0057F94A /* JJHomeApi.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -691,6 +696,7 @@
 				D62AAF871FC57BB800662628 /* JJBaseViewController.m in Sources */,
 				D62AAF601FC55B9B00662628 /* NSURL+Video.m in Sources */,
 				D62AAF6B1FC55B9B00662628 /* UILabel+AutoSize.m in Sources */,
+				D64E833D1FCBA8DE0057F94A /* JJHomeApi.m in Sources */,
 				D62AAF841FC56B9300662628 /* JJMeViewController.m in Sources */,
 				D62AAF631FC55B9B00662628 /* UIColor+Hex.m in Sources */,
 				D62AAF751FC55D0500662628 /* JJGuideContentView.m in Sources */,
