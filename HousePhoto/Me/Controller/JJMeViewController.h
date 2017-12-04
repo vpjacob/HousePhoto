@@ -10,5 +10,8 @@
 
 
 @interface JJMeViewController : JJBaseViewController
+@property (strong, nonatomic) IBOutlet UIView *headerView;
+@property (weak, nonatomic) IBOutlet UIImageView *headerIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImg;
 
 @end

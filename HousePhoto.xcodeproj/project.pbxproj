@@ -52,6 +52,27 @@
 		D62AAF841FC56B9300662628 /* JJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62AAF831FC56B9300662628 /* JJMeViewController.m */; };
 		D62AAF871FC57BB800662628 /* JJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62AAF861FC57BB800662628 /* JJBaseViewController.m */; };
 		D64E833D1FCBA8DE0057F94A /* JJHomeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D64E833C1FCBA8DE0057F94A /* JJHomeApi.m */; };
+		D69A319A1FD4FB46008A68D0 /* JJHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31981FD4FB46008A68D0 /* JJHomeTableViewCell.m */; };
+		D69A319B1FD4FB46008A68D0 /* JJHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69A31991FD4FB46008A68D0 /* JJHomeTableViewCell.xib */; };
+		D69A319E1FD51AD0008A68D0 /* JJHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A319D1FD51AD0008A68D0 /* JJHomeModel.m */; };
+		D69A31A11FD51B02008A68D0 /* JJDetailPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31A01FD51B02008A68D0 /* JJDetailPicViewController.m */; };
+		D69A31C51FD51E6C008A68D0 /* UIImage+XLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31A41FD51E6C008A68D0 /* UIImage+XLExtension.m */; };
+		D69A31C61FD51E6C008A68D0 /* UIView+XLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31A61FD51E6C008A68D0 /* UIView+XLExtension.m */; };
+		D69A31C71FD51E6C008A68D0 /* FSActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31AA1FD51E6C008A68D0 /* FSActionSheet.m */; };
+		D69A31C81FD51E6C008A68D0 /* FSActionSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31AC1FD51E6C008A68D0 /* FSActionSheetCell.m */; };
+		D69A31C91FD51E6C008A68D0 /* FSActionSheetConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31AE1FD51E6C008A68D0 /* FSActionSheetConfig.m */; };
+		D69A31CA1FD51E6C008A68D0 /* FSActionSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31B01FD51E6C008A68D0 /* FSActionSheetItem.m */; };
+		D69A31CB1FD51E6C008A68D0 /* FSActionSheet_cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D69A31B21FD51E6C008A68D0 /* FSActionSheet_cancel@2x.png */; };
+		D69A31CC1FD51E6C008A68D0 /* FSActionSheet_cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D69A31B31FD51E6C008A68D0 /* FSActionSheet_cancel@3x.png */; };
+		D69A31CD1FD51E6C008A68D0 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31B61FD51E6C008A68D0 /* TAAbstractDotView.m */; };
+		D69A31CE1FD51E6C008A68D0 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31B81FD51E6C008A68D0 /* TAAnimatedDotView.m */; };
+		D69A31CF1FD51E6C008A68D0 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31BA1FD51E6C008A68D0 /* TADotView.m */; };
+		D69A31D01FD51E6C008A68D0 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31BC1FD51E6C008A68D0 /* TAPageControl.m */; };
+		D69A31D11FD51E6C008A68D0 /* XLPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31BE1FD51E6C008A68D0 /* XLPhotoBrowser.m */; };
+		D69A31D21FD51E6C008A68D0 /* XLProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31C21FD51E6C008A68D0 /* XLProgressView.m */; };
+		D69A31D31FD51E6C008A68D0 /* XLZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31C41FD51E6C008A68D0 /* XLZoomingScrollView.m */; };
+		D69A31D91FD54201008A68D0 /* JJMeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69A31D81FD54201008A68D0 /* JJMeHeaderView.xib */; };
+		D69A31DC1FD547A7008A68D0 /* JJBaseNav.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A31DB1FD547A7008A68D0 /* JJBaseNav.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +168,46 @@
 		D62AAF861FC57BB800662628 /* JJBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJBaseViewController.m; sourceTree = "<group>"; };
 		D64E833B1FCBA8DE0057F94A /* JJHomeApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJHomeApi.h; sourceTree = "<group>"; };
 		D64E833C1FCBA8DE0057F94A /* JJHomeApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJHomeApi.m; sourceTree = "<group>"; };
+		D69A31971FD4FB46008A68D0 /* JJHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJHomeTableViewCell.h; sourceTree = "<group>"; };
+		D69A31981FD4FB46008A68D0 /* JJHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJHomeTableViewCell.m; sourceTree = "<group>"; };
+		D69A31991FD4FB46008A68D0 /* JJHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJHomeTableViewCell.xib; sourceTree = "<group>"; };
+		D69A319C1FD51AD0008A68D0 /* JJHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJHomeModel.h; sourceTree = "<group>"; };
+		D69A319D1FD51AD0008A68D0 /* JJHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJHomeModel.m; sourceTree = "<group>"; };
+		D69A319F1FD51B02008A68D0 /* JJDetailPicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJDetailPicViewController.h; sourceTree = "<group>"; };
+		D69A31A01FD51B02008A68D0 /* JJDetailPicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJDetailPicViewController.m; sourceTree = "<group>"; };
+		D69A31A31FD51E6C008A68D0 /* UIImage+XLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XLExtension.h"; sourceTree = "<group>"; };
+		D69A31A41FD51E6C008A68D0 /* UIImage+XLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XLExtension.m"; sourceTree = "<group>"; };
+		D69A31A51FD51E6C008A68D0 /* UIView+XLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XLExtension.h"; sourceTree = "<group>"; };
+		D69A31A61FD51E6C008A68D0 /* UIView+XLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XLExtension.m"; sourceTree = "<group>"; };
+		D69A31A91FD51E6C008A68D0 /* FSActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSActionSheet.h; sourceTree = "<group>"; };
+		D69A31AA1FD51E6C008A68D0 /* FSActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSActionSheet.m; sourceTree = "<group>"; };
+		D69A31AB1FD51E6C008A68D0 /* FSActionSheetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSActionSheetCell.h; sourceTree = "<group>"; };
+		D69A31AC1FD51E6C008A68D0 /* FSActionSheetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSActionSheetCell.m; sourceTree = "<group>"; };
+		D69A31AD1FD51E6C008A68D0 /* FSActionSheetConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSActionSheetConfig.h; sourceTree = "<group>"; };
+		D69A31AE1FD51E6C008A68D0 /* FSActionSheetConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSActionSheetConfig.m; sourceTree = "<group>"; };
+		D69A31AF1FD51E6C008A68D0 /* FSActionSheetItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSActionSheetItem.h; sourceTree = "<group>"; };
+		D69A31B01FD51E6C008A68D0 /* FSActionSheetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSActionSheetItem.m; sourceTree = "<group>"; };
+		D69A31B21FD51E6C008A68D0 /* FSActionSheet_cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FSActionSheet_cancel@2x.png"; sourceTree = "<group>"; };
+		D69A31B31FD51E6C008A68D0 /* FSActionSheet_cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FSActionSheet_cancel@3x.png"; sourceTree = "<group>"; };
+		D69A31B51FD51E6C008A68D0 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		D69A31B61FD51E6C008A68D0 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		D69A31B71FD51E6C008A68D0 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		D69A31B81FD51E6C008A68D0 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		D69A31B91FD51E6C008A68D0 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		D69A31BA1FD51E6C008A68D0 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		D69A31BB1FD51E6C008A68D0 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		D69A31BC1FD51E6C008A68D0 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		D69A31BD1FD51E6C008A68D0 /* XLPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPhotoBrowser.h; sourceTree = "<group>"; };
+		D69A31BE1FD51E6C008A68D0 /* XLPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPhotoBrowser.m; sourceTree = "<group>"; };
+		D69A31BF1FD51E6C008A68D0 /* XLPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		D69A31C01FD51E6C008A68D0 /* XLPhotoBrowserTypeDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPhotoBrowserTypeDefine.h; sourceTree = "<group>"; };
+		D69A31C11FD51E6C008A68D0 /* XLProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLProgressView.h; sourceTree = "<group>"; };
+		D69A31C21FD51E6C008A68D0 /* XLProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLProgressView.m; sourceTree = "<group>"; };
+		D69A31C31FD51E6C008A68D0 /* XLZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLZoomingScrollView.h; sourceTree = "<group>"; };
+		D69A31C41FD51E6C008A68D0 /* XLZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLZoomingScrollView.m; sourceTree = "<group>"; };
+		D69A31D81FD54201008A68D0 /* JJMeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJMeHeaderView.xib; sourceTree = "<group>"; };
+		D69A31DA1FD547A7008A68D0 /* JJBaseNav.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJBaseNav.h; sourceTree = "<group>"; };
+		D69A31DB1FD547A7008A68D0 /* JJBaseNav.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJBaseNav.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +290,7 @@
 		D62AAEF21FC546E700662628 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				D69A31A21FD51E6C008A68D0 /* XLPhotoBrowser+CoderXL */,
 				D62AAEFE1FC5549800662628 /* MTLManagedObjectAdapter */,
 			);
 			path = Vender;
@@ -269,6 +331,8 @@
 				D62AAF0B1FC55B4500662628 /* JJBaseRequest.m */,
 				D62AAF851FC57BB800662628 /* JJBaseViewController.h */,
 				D62AAF861FC57BB800662628 /* JJBaseViewController.m */,
+				D69A31DA1FD547A7008A68D0 /* JJBaseNav.h */,
+				D69A31DB1FD547A7008A68D0 /* JJBaseNav.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -488,6 +552,7 @@
 		D62AAF791FC56B5200662628 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D69A31D81FD54201008A68D0 /* JJMeHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -504,6 +569,8 @@
 			children = (
 				D62AAF7F1FC56B8900662628 /* JJHomeViewController.h */,
 				D62AAF801FC56B8900662628 /* JJHomeViewController.m */,
+				D69A319F1FD51B02008A68D0 /* JJDetailPicViewController.h */,
+				D69A31A01FD51B02008A68D0 /* JJDetailPicViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -520,6 +587,9 @@
 		D62AAF7D1FC56B5C00662628 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D69A31971FD4FB46008A68D0 /* JJHomeTableViewCell.h */,
+				D69A31981FD4FB46008A68D0 /* JJHomeTableViewCell.m */,
+				D69A31991FD4FB46008A68D0 /* JJHomeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -527,8 +597,79 @@
 		D62AAF7E1FC56B5C00662628 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D69A319C1FD51AD0008A68D0 /* JJHomeModel.h */,
+				D69A319D1FD51AD0008A68D0 /* JJHomeModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D69A31A21FD51E6C008A68D0 /* XLPhotoBrowser+CoderXL */ = {
+			isa = PBXGroup;
+			children = (
+				D69A31A31FD51E6C008A68D0 /* UIImage+XLExtension.h */,
+				D69A31A41FD51E6C008A68D0 /* UIImage+XLExtension.m */,
+				D69A31A51FD51E6C008A68D0 /* UIView+XLExtension.h */,
+				D69A31A61FD51E6C008A68D0 /* UIView+XLExtension.m */,
+				D69A31A71FD51E6C008A68D0 /* Vender */,
+				D69A31BD1FD51E6C008A68D0 /* XLPhotoBrowser.h */,
+				D69A31BE1FD51E6C008A68D0 /* XLPhotoBrowser.m */,
+				D69A31BF1FD51E6C008A68D0 /* XLPhotoBrowserConfig.h */,
+				D69A31C01FD51E6C008A68D0 /* XLPhotoBrowserTypeDefine.h */,
+				D69A31C11FD51E6C008A68D0 /* XLProgressView.h */,
+				D69A31C21FD51E6C008A68D0 /* XLProgressView.m */,
+				D69A31C31FD51E6C008A68D0 /* XLZoomingScrollView.h */,
+				D69A31C41FD51E6C008A68D0 /* XLZoomingScrollView.m */,
+			);
+			path = "XLPhotoBrowser+CoderXL";
+			sourceTree = "<group>";
+		};
+		D69A31A71FD51E6C008A68D0 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				D69A31A81FD51E6C008A68D0 /* FSActionSheet */,
+				D69A31B41FD51E6C008A68D0 /* PageControl */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		D69A31A81FD51E6C008A68D0 /* FSActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				D69A31A91FD51E6C008A68D0 /* FSActionSheet.h */,
+				D69A31AA1FD51E6C008A68D0 /* FSActionSheet.m */,
+				D69A31AB1FD51E6C008A68D0 /* FSActionSheetCell.h */,
+				D69A31AC1FD51E6C008A68D0 /* FSActionSheetCell.m */,
+				D69A31AD1FD51E6C008A68D0 /* FSActionSheetConfig.h */,
+				D69A31AE1FD51E6C008A68D0 /* FSActionSheetConfig.m */,
+				D69A31AF1FD51E6C008A68D0 /* FSActionSheetItem.h */,
+				D69A31B01FD51E6C008A68D0 /* FSActionSheetItem.m */,
+				D69A31B11FD51E6C008A68D0 /* FSActionSheetResources */,
+			);
+			path = FSActionSheet;
+			sourceTree = "<group>";
+		};
+		D69A31B11FD51E6C008A68D0 /* FSActionSheetResources */ = {
+			isa = PBXGroup;
+			children = (
+				D69A31B21FD51E6C008A68D0 /* FSActionSheet_cancel@2x.png */,
+				D69A31B31FD51E6C008A68D0 /* FSActionSheet_cancel@3x.png */,
+			);
+			path = FSActionSheetResources;
+			sourceTree = "<group>";
+		};
+		D69A31B41FD51E6C008A68D0 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				D69A31B51FD51E6C008A68D0 /* TAAbstractDotView.h */,
+				D69A31B61FD51E6C008A68D0 /* TAAbstractDotView.m */,
+				D69A31B71FD51E6C008A68D0 /* TAAnimatedDotView.h */,
+				D69A31B81FD51E6C008A68D0 /* TAAnimatedDotView.m */,
+				D69A31B91FD51E6C008A68D0 /* TADotView.h */,
+				D69A31BA1FD51E6C008A68D0 /* TADotView.m */,
+				D69A31BB1FD51E6C008A68D0 /* TAPageControl.h */,
+				D69A31BC1FD51E6C008A68D0 /* TAPageControl.m */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -594,7 +735,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D62AAEE81FC5434900662628 /* LaunchScreen.storyboard in Resources */,
+				D69A31CB1FD51E6C008A68D0 /* FSActionSheet_cancel@2x.png in Resources */,
 				D62AAEE51FC5434900662628 /* Assets.xcassets in Resources */,
+				D69A319B1FD4FB46008A68D0 /* JJHomeTableViewCell.xib in Resources */,
+				D69A31CC1FD51E6C008A68D0 /* FSActionSheet_cancel@3x.png in Resources */,
+				D69A31D91FD54201008A68D0 /* JJMeHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,15 +814,23 @@
 				D62AAF0D1FC55B4500662628 /* JJBaseRequest.m in Sources */,
 				D62AAF651FC55B9B00662628 /* UIImage+Resize.m in Sources */,
 				D62AAF5B1FC55B9B00662628 /* NSString+HTML.m in Sources */,
+				D69A319A1FD4FB46008A68D0 /* JJHomeTableViewCell.m in Sources */,
 				D62AAEE31FC5434900662628 /* HousePhoto.xcdatamodeld in Sources */,
+				D69A319E1FD51AD0008A68D0 /* JJHomeModel.m in Sources */,
+				D69A31CA1FD51E6C008A68D0 /* FSActionSheetItem.m in Sources */,
 				D62AAF611FC55B9B00662628 /* UIButton+CountDown.m in Sources */,
+				D69A31D31FD51E6C008A68D0 /* XLZoomingScrollView.m in Sources */,
 				D61AAAF21FC6707700EF8FC0 /* JJMJRefreshNoMoreDataFooter.m in Sources */,
 				D62AAF6F1FC55B9B00662628 /* UIView+Frame.m in Sources */,
+				D69A31C81FD51E6C008A68D0 /* FSActionSheetCell.m in Sources */,
 				D62AAF691FC55B9B00662628 /* UIImageView+Addition.m in Sources */,
+				D69A31D01FD51E6C008A68D0 /* TAPageControl.m in Sources */,
 				D62AAF6D1FC55B9B00662628 /* UIResponder+Router.m in Sources */,
 				D62AAF5F1FC55B9B00662628 /* NSTimer+EOCBlocksSupport.m in Sources */,
+				D69A31CF1FD51E6C008A68D0 /* TADotView.m in Sources */,
 				D62AAF561FC55B9B00662628 /* GTMNSString+HTML.m in Sources */,
 				D62AAEEB1FC5434900662628 /* main.m in Sources */,
+				D69A31DC1FD547A7008A68D0 /* JJBaseNav.m in Sources */,
 				D62AAEFA1FC5538C00662628 /* JJBaseNavigationController.m in Sources */,
 				D62AAF641FC55B9B00662628 /* UIImage+Alpha.m in Sources */,
 				D62AAF5D1FC55B9B00662628 /* NSString+Size.m in Sources */,
@@ -685,19 +838,28 @@
 				D62AAF661FC55B9B00662628 /* UIImage+RoundedCorner.m in Sources */,
 				D62AAF681FC55B9B00662628 /* UIImage+WaterMark.m in Sources */,
 				D62AAF5C1FC55B9B00662628 /* NSString+MD5.m in Sources */,
+				D69A31C71FD51E6C008A68D0 /* FSActionSheet.m in Sources */,
 				D62AAF811FC56B8900662628 /* JJHomeViewController.m in Sources */,
 				D62AAF071FC5549800662628 /* MTLManagedObjectAdapter.m in Sources */,
 				D62AAF621FC55B9B00662628 /* UIButton+Indicator.m in Sources */,
 				D62AAF761FC55D0500662628 /* JJGuideView.m in Sources */,
+				D69A31CD1FD51E6C008A68D0 /* TAAbstractDotView.m in Sources */,
+				D69A31C91FD51E6C008A68D0 /* FSActionSheetConfig.m in Sources */,
+				D69A31D11FD51E6C008A68D0 /* XLPhotoBrowser.m in Sources */,
 				D62AAF6C1FC55B9B00662628 /* UINavigationController+StackManager.m in Sources */,
 				D62AAF061FC5549800662628 /* EXTRuntimeExtensions.m in Sources */,
 				D62AAF671FC55B9B00662628 /* UIImage+VideoPreview.m in Sources */,
+				D69A31C51FD51E6C008A68D0 /* UIImage+XLExtension.m in Sources */,
 				D62AAF5A1FC55B9B00662628 /* NSString+Empty.m in Sources */,
 				D62AAF871FC57BB800662628 /* JJBaseViewController.m in Sources */,
+				D69A31CE1FD51E6C008A68D0 /* TAAnimatedDotView.m in Sources */,
 				D62AAF601FC55B9B00662628 /* NSURL+Video.m in Sources */,
 				D62AAF6B1FC55B9B00662628 /* UILabel+AutoSize.m in Sources */,
+				D69A31C61FD51E6C008A68D0 /* UIView+XLExtension.m in Sources */,
 				D64E833D1FCBA8DE0057F94A /* JJHomeApi.m in Sources */,
+				D69A31A11FD51B02008A68D0 /* JJDetailPicViewController.m in Sources */,
 				D62AAF841FC56B9300662628 /* JJMeViewController.m in Sources */,
+				D69A31D21FD51E6C008A68D0 /* XLProgressView.m in Sources */,
 				D62AAF631FC55B9B00662628 /* UIColor+Hex.m in Sources */,
 				D62AAF751FC55D0500662628 /* JJGuideContentView.m in Sources */,
 				D62AAF5E1FC55B9B00662628 /* NSString+Trim.m in Sources */,

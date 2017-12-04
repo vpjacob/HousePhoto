@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-//#import ""
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 
 
@@ -28,7 +28,7 @@
     self.tabVC = [[JJTabBarController alloc] init];
     self.window.rootViewController = self.tabVC;
     [self.window makeKeyAndVisible];
-    
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-9554187975714748~7729891455"];
     return YES;
 }
 

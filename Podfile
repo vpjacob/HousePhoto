@@ -8,7 +8,7 @@ target 'HousePhoto' do
   # Pods for HousePhoto
 
 pod 'Google-Mobile-Ads-SDK'
-#pod 'XLPhotoBrowser'
+#pod 'XLPhotoBrowser'  不错，但有冲突
 pod 'YTKNetwork'
 pod 'Mantle'
 pod 'MagicalRecord'

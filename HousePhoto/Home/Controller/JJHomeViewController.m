@@ -9,10 +9,13 @@
 #import "JJHomeViewController.h"
 #import <MJRefresh.h>
 #import "JJHomeApi.h"
+#import "JJHomeTableViewCell.h"
+#import "XLPhotoBrowser.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 
 @interface JJHomeViewController ()
-
+@property(nonatomic, strong) GADInterstitial*interstitial;
 @end
 
 @implementation JJHomeViewController
@@ -36,7 +39,22 @@
     
     [self netWorkWithPage:self.requestPage];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ADAction) name:@"showADAction" object:nil];
+    
 }
+
+- (void)ADAction{
+    if (self.interstitial.isReady) {
+        [self.interstitial presentFromRootViewController:self];
+    } else {
+        NSLog(@"Ad wasn't ready");
+    }
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)netWorkWithPage2:(NSInteger)page{
     JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page];
     [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
@@ -69,16 +87,39 @@
 #pragma mark - datasorce&delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self netWorkWithPage2:self.requestPage];
+//    [self netWorkWithPage2:self.requestPage];
+    self.interstitial = [[GADInterstitial alloc]
+                         initWithAdUnitID:@"ca-app-pub-9554187975714748/6109741924"];
+    GADRequest *request = [GADRequest request];
+    [self.interstitial loadRequest:request];
+    
+    
+    UIImage *img = [UIImage imageNamed:@"placeholder"];
+    [XLPhotoBrowser showPhotoBrowserWithImages:@[img,img,img,img,img] currentImageIndex:0];
+//    JJADViewController *ad = [JJADViewController new];
+//    [self.navigationController pushViewController:ad animated:YES];
+    
+    
+    
 }
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 20;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 250;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = @(indexPath.row).description;
+    JJHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JJHomeTableViewCell"];
+    if (cell == nil) {
+        cell = [[NSBundle mainBundle] loadNibNamed:@"JJHomeTableViewCell" owner:self options:nil].lastObject;
+    }
+    
     return cell;
 }
 
