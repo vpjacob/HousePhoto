@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
-
+#import <WeiboSDK.h>
 
 
 
@@ -29,6 +29,7 @@
     self.window.rootViewController = self.tabVC;
     [self.window makeKeyAndVisible];
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-9554187975714748~7729891455"];
+    [WeiboSDK registerApp:@"698139917"];
     return YES;
 }
 

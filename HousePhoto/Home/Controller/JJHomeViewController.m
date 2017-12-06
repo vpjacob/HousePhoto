@@ -14,9 +14,10 @@
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
 
-@interface JJHomeViewController ()
+@interface JJHomeViewController ()<XLPhotoBrowserDelegate,XLPhotoBrowserDatasource>
 @property(nonatomic, strong) GADInterstitial*interstitial;
 @end
+
 
 @implementation JJHomeViewController
 
@@ -93,17 +94,63 @@
     GADRequest *request = [GADRequest request];
     [self.interstitial loadRequest:request];
     
+   XLPhotoBrowser *browser = [XLPhotoBrowser showPhotoBrowserWithCurrentImageIndex:indexPath.row imageCount:5 datasource:self];
+    [browser setActionSheetWithTitle:@"选择" delegate:self cancelButtonTitle:nil deleteButtonTitle:nil otherButtonTitles:@"发送给朋友",@"保存图片",@"收藏",@"投诉举报",nil];
+}
+
+- (UIImage *)photoBrowser:(XLPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index{
+    return [UIImage imageNamed:@"placeholder"];
+}
+
+- (NSURL *)photoBrowser:(XLPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index{
+//    return
     
-    UIImage *img = [UIImage imageNamed:@"placeholder"];
-    [XLPhotoBrowser showPhotoBrowserWithImages:@[img,img,img,img,img] currentImageIndex:0];
-//    JJADViewController *ad = [JJADViewController new];
-//    [self.navigationController pushViewController:ad animated:YES];
+     NSArray<NSString *> * array = @[
+                               @"http://upload-images.jianshu.io/upload_images/1455933-7245174910b68599.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+                               @"http://upload-images.jianshu.io/upload_images/1455933-e74ae4df495938b7.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+                               @"http://upload-images.jianshu.io/upload_images/1455933-ee53be08d63a0d22.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+                               @"http://upload-images.jianshu.io/upload_images/1455933-412255ddafdde125.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+                               @"http://upload-images.jianshu.io/upload_images/1455933-cee5618e9750de12.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+                               
+                               ];
     
-    
+    return [NSURL URLWithString:array[index]];
     
 }
 
-
+- (void)photoBrowser:(XLPhotoBrowser *)browser clickActionSheetIndex:(NSInteger)actionSheetindex currentImageIndex:(NSInteger)currentImageIndex{
+    switch (actionSheetindex) {
+       
+        case 1: // 发送
+        {
+            NSLog(@"点击了actionSheet索引是:%zd , 当前展示的图片索引是:%zd",actionSheetindex,currentImageIndex);
+            [browser saveCurrentShowImage];
+        }
+            break;
+        case 2: // 保存
+        {
+            NSLog(@"点击了actionSheet索引是:%zd , 当前展示的图片索引是:%zd",actionSheetindex,currentImageIndex);
+            [browser saveCurrentShowImage];
+        }
+            break;
+        case 3: // 保存
+        {
+            NSLog(@"点击了actionSheet索引是:%zd , 当前展示的图片索引是:%zd",actionSheetindex,currentImageIndex);
+            [browser saveCurrentShowImage];
+        }
+            break;
+        case 4: // 删除
+        {
+            
+        }
+            break;
+        default:
+        {
+            NSLog(@"点击了actionSheet索引是:%zd , 当前展示的图片索引是:%zd",actionSheetindex,currentImageIndex);
+        }
+            break;
+    }
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 20;

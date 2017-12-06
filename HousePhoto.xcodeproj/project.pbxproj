@@ -239,6 +239,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D60AF55E1FD7B79700D525B7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Main;
+			path = Home/Main;
+			sourceTree = "<group>";
+		};
 		D61AAAEF1FC6707700EF8FC0 /* JJMJEx */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +279,7 @@
 			children = (
 				D62AAF111FC55B9B00662628 /* Categories */,
 				D62AAEF51FC546E700662628 /* Base */,
+				D60AF55E1FD7B79700D525B7 /* Main */,
 				D62AAEF31FC546E700662628 /* Home */,
 				D62AAEF61FC546E700662628 /* Me */,
 				D62AAEF41FC546E700662628 /* Utils */,
@@ -771,6 +780,7 @@
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/LCProgressHUD/LCProgressHUD/LCProgressHUD.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/Weibo_SDK/libWeiboSDK/WeiboSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
