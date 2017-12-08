@@ -21,6 +21,8 @@
 
 - (NSString *)requestUrl{
     return @"http://api.dantangapp.com/v1/collections";
+//    return [NSString stringWithFormat:@"http://gank.io/api/data/福利/10/%zd",_page];
+//    return @"http://gank.io/api/data/福利/10/1";
 }
 
 - (id)requestArgument{
