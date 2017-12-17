@@ -13,8 +13,8 @@
 #import <SDImageCache.h>
 #import <WeiboSDK.h>
 
-@interface JJMeViewController ()<UITableViewDelegate>
-@property (nonatomic, strong) JJBaseNav *nav;
+@interface JJMeViewController ()<UITableViewDelegate,WBMediaTransferProtocol>
+@property (nonatomic, strong) JJBaseNav *nav;        
 @end
 
 @implementation JJMeViewController
@@ -71,15 +71,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.row == 0) {//分享
-//        [WeiboSDK shareToWeibo:@"ddd"];
-        UIImage *img = [UIImage imageNamed:@"a"];
-        WBMessageObject *megObj = [[WBMessageObject alloc] init];
-//        [megObj.imageObject addImages:@[img,img,img]];
-        megObj.text = @"分享~民宿";
-        
-//        megObj.imageObject = @[img,img,img];
-        WBSendMessageToWeiboRequest *req = [WBSendMessageToWeiboRequest requestWithMessage:megObj];
-        [WeiboSDK sendRequest:req];
+////        [WeiboSDK shareToWeibo:@"ddd"];
+//        UIImage *img = [UIImage imageNamed:@"a"];
+//        WBMessageObject *megObj = [[WBMessageObject alloc] init];
+////        [megObj.imageObject addImages:@[img,img,img]];
+//        megObj.text = @"分享~民宿";
+//        
+////        megObj.imageObject = @[img,img,img];
+//        WBSendMessageToWeiboRequest *req = [WBSendMessageToWeiboRequest requestWithMessage:megObj];
+//        [WeiboSDK sendRequest:req];
+//        UIImage *image = [UIImage imageNamed:@"a"];
+//        UIImage *image1 = [UIImage imageNamed:@"a"];
+//        WBImageObject *imageObject = [WBImageObject object];
+//        [imageObject addImages:@[image,image1]];
+//        imageObject.delegate = self;
         
     }else if (indexPath.row == 1){//清除缓存
          NSUInteger ints = [[SDImageCache sharedImageCache] getSize];
@@ -95,7 +100,30 @@
 }
 
 
+/**
+ 数据准备成功回调
+ */
+-(void)wbsdk_TransferDidReceiveObject:(id)object{
+    
+    DLog(@"%@",object);
+    
+    
+    WBMessageObject *message = [WBMessageObject message];
+    message.text = @"ddd";
+    
+    message.imageObject = object;
+    
+    WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message];
+    [WeiboSDK sendRequest:request];
+    
+}
 
+/**
+ 数据准备失败回调
+ */
+-(void)wbsdk_TransferDidFailWithErrorCode:(WBSDKMediaTransferErrorCode)errorCode andError:(NSError*)error{
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

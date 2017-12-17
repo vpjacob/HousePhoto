@@ -21,6 +21,6 @@ pod 'SWTableViewCell'
 pod 'VTMagic'
 pod 'libextobjc'
 pod 'Weibo_SDK'
-
+pod 'WechatOpenSDK'
 
 end
