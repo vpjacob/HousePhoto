@@ -7,12 +7,15 @@
 //
 
 #import <YTKNetwork/YTKNetwork.h>
+#import<CommonCrypto/CommonDigest.h>
 
 @interface JJBaseRequest : YTKRequest
 /**
  *  hud显示内容(如果成功后需要提示内容,勿使用此方法)
  */
 @property (nonatomic, copy) NSString *hudString;
+
+- (NSString *) md5:(NSString *) input;
 
 /**
  *  基本配置字典 配置 ver_num

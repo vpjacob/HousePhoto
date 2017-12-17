@@ -7,6 +7,7 @@
 //
 
 #import "JJDetailPicViewController.h"
+#import "JJHomeDetailApi.h"
 
 @interface JJDetailPicViewController ()
 
@@ -17,6 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    JJHomeDetailApi *api = [[JJHomeDetailApi alloc] initWithArticleId:2];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        DLog(@"%@",request.responseObject);
+        
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        
+    }];
+    
 }
 
 

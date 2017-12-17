@@ -12,7 +12,9 @@
 #import "JJHomeTableViewCell.h"
 #import "XLPhotoBrowser.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
-
+#import "JJHomeModel.h"
+#import "JJDetailPicViewController.h"
+#import "JJPictureUpViewController.h"
 
 @interface JJHomeViewController ()<XLPhotoBrowserDelegate,XLPhotoBrowserDatasource>
 @property(nonatomic, strong) GADInterstitial*interstitial;
@@ -30,7 +32,7 @@
     
     [self addMJRefreshHeadView:^(NSInteger page) {
         DLog(@"%zd",page);
-        [weakSelf netWorkWithPage2:page];
+        [weakSelf netWorkWithPage:page];
     }];
     
     [self addMJRefreshFootView:^(NSInteger page) {
@@ -38,7 +40,7 @@
         [weakSelf netWorkWithPage:page];
     }];
     
-    [self netWorkWithPage:self.requestPage];
+    [self netWorkWithPage:1];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ADAction) name:@"showADAction" object:nil];
     
@@ -56,10 +58,16 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)netWorkWithPage2:(NSInteger)page{
-    JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page];
+- (void)netWorkWithPage:(NSInteger)page{
+    DLog(@"%zd",page);
+    JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page pageSize:20];
     [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-        DLog(@"%@-----su",request.responseData);
+        NSString *str = request.responseObject[@"info"];
+        NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        DLog(@"%@-----su",array);
+        DLog(@"%@-----su",request.responseObject[@"info"]);
         
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         DLog(@"%@----fa----%zd",request,page);
@@ -70,32 +78,52 @@
     }];
 }
 
-- (void)netWorkWithPage:(NSInteger)page{
-    JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page];
-    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-        DLog(@"%@-----su",request.responseData);
-        
-    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
-        DLog(@"%@----fa----%zd",request,page);
-        
-        [self requestSuccess:YES requestEnd:NO];
-        self.tableView.scrollsToTop = YES;
-        [self.tableView.mj_footer endRefreshing];
-    }];
-}
+
+//- (void)netWorkWithPage2:(NSInteger)page{
+//    JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page];
+//    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+//        DLog(@"%@-----su",request.responseData);
+//
+//    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+//        DLog(@"%@----fa----%zd",request,page);
+//
+//        [self requestSuccess:NO requestEnd:NO];
+//        self.tableView.scrollsToTop = YES;
+//        [self.tableView.mj_footer endRefreshing];
+//    }];
+//}
+
+//- (void)netWorkWithPage:(NSInteger)page{
+//    JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page];
+//    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+//        DLog(@"%@-----su",request.responseData);
+//
+//    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+//        DLog(@"%@----fa----%zd",request,page);
+//
+//        [self requestSuccess:YES requestEnd:NO];
+//        self.tableView.scrollsToTop = YES;
+//        [self.tableView.mj_footer endRefreshing];
+//    }];
+//}
 
 
 #pragma mark - datasorce&delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    [self netWorkWithPage2:self.requestPage];
-    self.interstitial = [[GADInterstitial alloc]
-                         initWithAdUnitID:@"ca-app-pub-9554187975714748/6109741924"];
-    GADRequest *request = [GADRequest request];
-    [self.interstitial loadRequest:request];
+//    self.interstitial = [[GADInterstitial alloc]
+//                         initWithAdUnitID:@"ca-app-pub-9554187975714748/6109741924"];
+//    GADRequest *request = [GADRequest request];
+//    [self.interstitial loadRequest:request];
+//
+//   XLPhotoBrowser *browser = [XLPhotoBrowser showPhotoBrowserWithCurrentImageIndex:indexPath.row imageCount:5 datasource:self];
+//    [browser setActionSheetWithTitle:@"选择" delegate:self cancelButtonTitle:nil deleteButtonTitle:nil otherButtonTitles:@"发送给朋友",@"保存图片",@"收藏",@"投诉举报",nil];
+
+//    [self.navigationController pushViewController:[JJDetailPicViewController new] animated:YES];
+
+    [self.navigationController pushViewController:[JJPictureUpViewController new] animated:YES];
     
-   XLPhotoBrowser *browser = [XLPhotoBrowser showPhotoBrowserWithCurrentImageIndex:indexPath.row imageCount:5 datasource:self];
-    [browser setActionSheetWithTitle:@"选择" delegate:self cancelButtonTitle:nil deleteButtonTitle:nil otherButtonTitles:@"发送给朋友",@"保存图片",@"收藏",@"投诉举报",nil];
 }
 
 - (UIImage *)photoBrowser:(XLPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index{

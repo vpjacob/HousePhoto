@@ -10,4 +10,11 @@
 
 @implementation JJHomeModel
 
++ (NSDictionary *)JSONKeyPathsByPropertyKey{
+    NSMutableDictionary *muDic = [NSMutableDictionary dictionary];
+    [muDic addEntriesFromDictionary:[NSDictionary mtl_identityPropertyMapWithModel:self.class]];
+    muDic[@"article_id"] = @"id";
+    return muDic;
+}
+
 @end

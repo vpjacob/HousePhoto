@@ -9,5 +9,12 @@
 #import "JJBaseModel.h"
 
 @interface JJHomeModel : JJBaseModel
+@property (nonatomic, assign)NSInteger articleType;
+@property (nonatomic, assign)NSInteger article_id;
+@property (nonatomic, assign)NSInteger isDel;
+@property (nonatomic, assign)NSInteger isShow;
+@property (nonatomic, strong)NSString *name;
+@property (nonatomic, strong)NSString *previewImgUrls;
+@property (nonatomic, strong)NSString *updateTime;
 
 @end

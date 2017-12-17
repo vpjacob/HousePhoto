@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
 #import <WeiboSDK.h>
-
+#import "JJLoginViewController.h"
 
 
 
@@ -26,13 +26,23 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     self.tabVC = [[JJTabBarController alloc] init];
-    self.window.rootViewController = self.tabVC;
+    JJLoginViewController *login = [JJLoginViewController new];
+    NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:kUid];
+    DLog(@"%@",uid);
+    if (uid != nil) {
+        self.window.rootViewController = self.tabVC;
+    }else{
+        self.window.rootViewController = login;
+    }
     [self.window makeKeyAndVisible];
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-9554187975714748~7729891455"];
     [WeiboSDK registerApp:@"698139917"];
     return YES;
 }
 
+- (void)changeRootVC{
+    self.window.rootViewController = self.tabVC;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -10,6 +10,8 @@
 
 @interface JJHomeApi : JJBaseRequest
 
-- (instancetype)initWithPage:(NSInteger)page;
+//- (instancetype)initWithPage:(NSInteger)page;
+
+- (instancetype)initWithPage:(NSInteger)pageNo pageSize:(NSInteger)pageSize;
 
 @end

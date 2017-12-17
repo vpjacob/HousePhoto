@@ -39,6 +39,11 @@
 //weakSelf
 #define JJ_WS(weakSelf)  __weak __typeof(self)weakSelf = self;
 
+#define kUrl @"http://192.168.0.6:8080"
+#define kStatusCode @"statusCode"
+#define kIsLogin @"isLogin"
+#define kUid @"uid"
+
 //strongSelf
 #define JJ_SS(strongSelf, weakSelf) __strong __typeof(weakSelf)strongSelf = weakSelf;
 

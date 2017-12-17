@@ -74,8 +74,10 @@
 //        [WeiboSDK shareToWeibo:@"ddd"];
         UIImage *img = [UIImage imageNamed:@"a"];
         WBMessageObject *megObj = [[WBMessageObject alloc] init];
-        [megObj.imageObject addImages:@[img,img,img]];
+//        [megObj.imageObject addImages:@[img,img,img]];
         megObj.text = @"分享~民宿";
+        
+//        megObj.imageObject = @[img,img,img];
         WBSendMessageToWeiboRequest *req = [WBSendMessageToWeiboRequest requestWithMessage:megObj];
         [WeiboSDK sendRequest:req];
         
