@@ -14,7 +14,7 @@
 
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) JJLoginViewController *login;
 @end
 
 @implementation AppDelegate
@@ -26,17 +26,18 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     self.tabVC = [[JJTabBarController alloc] init];
-    JJLoginViewController *login = [JJLoginViewController new];
-    NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:kUid];
+    self.login = [JJLoginViewController new];
+    NSString *uid = kIsLogin;
     DLog(@"%@",uid);
     if (uid != nil) {
         self.window.rootViewController = self.tabVC;
     }else{
-        self.window.rootViewController = login;
+        self.window.rootViewController = self.login;
     }
     [self.window makeKeyAndVisible];
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-9554187975714748~7729891455"];
     [WeiboSDK registerApp:@"698139917"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeRootVC) name:@"changeRootVC" object:nil];
     return YES;
 }
 
