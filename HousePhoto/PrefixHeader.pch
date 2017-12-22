@@ -39,7 +39,7 @@
 //weakSelf
 #define JJ_WS(weakSelf)  __weak __typeof(self)weakSelf = self;
 
-#define kUrl @"http://192.168.0.6:8080"
+#define kUrl @"http://47.92.156.78:80"
 #define kStatusCode @"statusCode"
 #define kUid @"uid"
 #define kIsLogin [[NSUserDefaults standardUserDefaults] objectForKey:kUid]

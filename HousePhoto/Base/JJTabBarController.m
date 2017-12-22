@@ -23,7 +23,7 @@
     
     [self creatVC:@"JJHomeViewController" selectedImgStr:@"tab_home" unSelectedImgStr:@"tab_home_un" title:@"首页"];
     [self creatVC:@"JJMeViewController" selectedImgStr:@"tab_me" unSelectedImgStr:@"tab_me_un" title:@"我的"];
-    
+
 }
 
 - (void)creatVC:(NSString *)vcName selectedImgStr:(NSString *)selectedImgStr unSelectedImgStr:(NSString *)unSelectedImgStr title:(NSString *)title{

@@ -28,7 +28,8 @@
     [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
          DLog(@"%@",request.responseObject);
         NSNumber *statusCode = request.responseObject[kStatusCode];
-        NSString *uid = request.responseObject[kUid];
+//        NSString *uid = request.responseObject[kUid];
+        NSString *uid = @"a";
         DLog(@"%@",statusCode);
         if ([statusCode integerValue] == 1) {
             DLog(@"登录成功");

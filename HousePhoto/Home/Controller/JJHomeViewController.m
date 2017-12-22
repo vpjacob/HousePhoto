@@ -64,11 +64,12 @@
     [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
         NSString *str = request.responseObject[@"info"];
         NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
-
-        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        DLog(@"%@-----su",array);
-        DLog(@"%@-----su",request.responseObject[@"info"]);
-
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        DLog(@"%@-----su",dic);
+        DLog(@"%@-----su",request.responseObject);
+        
+        [self.dataSource addObjectsFromArray:[JJHomeModel changeJSONArray:dic[@"info"]]];
+        DLog(@"%@-----su",self.dataSource);
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         DLog(@"%@----fa----%zd",request,page);
 

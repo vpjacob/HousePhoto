@@ -12,7 +12,6 @@
 #import "JJLoginViewController.h"
 
 
-
 @interface AppDelegate ()
 @property (nonatomic, strong) JJLoginViewController *login;
 @end
@@ -40,6 +39,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeRootVC) name:@"changeRootVC" object:nil];
     return YES;
 }
+
 
 - (void)changeRootVC{
     self.window.rootViewController = self.tabVC;

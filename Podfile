@@ -22,5 +22,7 @@ pod 'VTMagic'
 pod 'libextobjc'
 pod 'Weibo_SDK'
 pod 'WechatOpenSDK'
+pod 'TZImagePickerController'
+
 
 end
