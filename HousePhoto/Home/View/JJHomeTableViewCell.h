@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JJHomeModel.h"
 
 @interface JJHomeTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *img01;
+@property (weak, nonatomic) IBOutlet UIImageView *img02;
+@property (weak, nonatomic) IBOutlet UIImageView *img03;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+
+@property (nonatomic, strong)JJHomeModel *model;
 
 @end

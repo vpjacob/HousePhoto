@@ -13,6 +13,13 @@
 		AC7A4F1A1FE610F100B68B3E /* JJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7A4F181FE610F100B68B3E /* JJLoginViewController.m */; };
 		AC7A4F1B1FE610F100B68B3E /* JJLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7A4F191FE610F100B68B3E /* JJLoginViewController.xib */; };
 		AC7A4F1E1FE6110700B68B3E /* JJLoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7A4F1D1FE6110700B68B3E /* JJLoginApi.m */; };
+		ACBBFF401FEF515E00AF85EA /* JJComposeAritcleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBBFF3E1FEF515E00AF85EA /* JJComposeAritcleViewController.m */; };
+		ACBBFF411FEF515E00AF85EA /* JJComposeAritcleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBBFF3F1FEF515E00AF85EA /* JJComposeAritcleViewController.xib */; };
+		ACBBFF441FEF7E2000AF85EA /* JJComposeArticalApi.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBBFF431FEF7E2000AF85EA /* JJComposeArticalApi.m */; };
+		ACBBFF471FEF9C5300AF85EA /* JJArticleDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBBFF461FEF9C5300AF85EA /* JJArticleDetailApi.m */; };
+		ACBBFF4A1FEF9C6D00AF85EA /* JJArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBBFF491FEF9C6D00AF85EA /* JJArticleDetailViewController.m */; };
+		ACBBFF4E1FEF9C8A00AF85EA /* JJArticleDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBBFF4C1FEF9C8A00AF85EA /* JJArticleDetailTableViewCell.m */; };
+		ACBBFF4F1FEF9C8A00AF85EA /* JJArticleDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBBFF4D1FEF9C8A00AF85EA /* JJArticleDetailTableViewCell.xib */; };
 		D5B67DC29DB874EF34D4216E /* libPods-HousePhoto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0719B35EAC0D7ED970F1F7F0 /* libPods-HousePhoto.a */; };
 		D61AAAF21FC6707700EF8FC0 /* JJMJRefreshNoMoreDataFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D61AAAF11FC6707700EF8FC0 /* JJMJRefreshNoMoreDataFooter.m */; };
 		D62AAEDA1FC5434800662628 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D62AAED91FC5434800662628 /* AppDelegate.m */; };
@@ -96,6 +103,18 @@
 		AC7A4F191FE610F100B68B3E /* JJLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJLoginViewController.xib; sourceTree = "<group>"; };
 		AC7A4F1C1FE6110700B68B3E /* JJLoginApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJLoginApi.h; sourceTree = "<group>"; };
 		AC7A4F1D1FE6110700B68B3E /* JJLoginApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJLoginApi.m; sourceTree = "<group>"; };
+		ACBBFF3D1FEF515D00AF85EA /* JJComposeAritcleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJComposeAritcleViewController.h; sourceTree = "<group>"; };
+		ACBBFF3E1FEF515E00AF85EA /* JJComposeAritcleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJComposeAritcleViewController.m; sourceTree = "<group>"; };
+		ACBBFF3F1FEF515E00AF85EA /* JJComposeAritcleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJComposeAritcleViewController.xib; sourceTree = "<group>"; };
+		ACBBFF421FEF7E2000AF85EA /* JJComposeArticalApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJComposeArticalApi.h; sourceTree = "<group>"; };
+		ACBBFF431FEF7E2000AF85EA /* JJComposeArticalApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJComposeArticalApi.m; sourceTree = "<group>"; };
+		ACBBFF451FEF9C5300AF85EA /* JJArticleDetailApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJArticleDetailApi.h; sourceTree = "<group>"; };
+		ACBBFF461FEF9C5300AF85EA /* JJArticleDetailApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJArticleDetailApi.m; sourceTree = "<group>"; };
+		ACBBFF481FEF9C6D00AF85EA /* JJArticleDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJArticleDetailViewController.h; sourceTree = "<group>"; };
+		ACBBFF491FEF9C6D00AF85EA /* JJArticleDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJArticleDetailViewController.m; sourceTree = "<group>"; };
+		ACBBFF4B1FEF9C8A00AF85EA /* JJArticleDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJArticleDetailTableViewCell.h; sourceTree = "<group>"; };
+		ACBBFF4C1FEF9C8A00AF85EA /* JJArticleDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJArticleDetailTableViewCell.m; sourceTree = "<group>"; };
+		ACBBFF4D1FEF9C8A00AF85EA /* JJArticleDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JJArticleDetailTableViewCell.xib; sourceTree = "<group>"; };
 		D61AAAF01FC6707700EF8FC0 /* JJMJRefreshNoMoreDataFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMJRefreshNoMoreDataFooter.h; sourceTree = "<group>"; };
 		D61AAAF11FC6707700EF8FC0 /* JJMJRefreshNoMoreDataFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMJRefreshNoMoreDataFooter.m; sourceTree = "<group>"; };
 		D62AAED51FC5434800662628 /* HousePhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HousePhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -633,8 +652,13 @@
 				D62AAF801FC56B8900662628 /* JJHomeViewController.m */,
 				D69A319F1FD51B02008A68D0 /* JJDetailPicViewController.h */,
 				D69A31A01FD51B02008A68D0 /* JJDetailPicViewController.m */,
+				ACBBFF3D1FEF515D00AF85EA /* JJComposeAritcleViewController.h */,
+				ACBBFF3E1FEF515E00AF85EA /* JJComposeAritcleViewController.m */,
+				ACBBFF3F1FEF515E00AF85EA /* JJComposeAritcleViewController.xib */,
 				AC03353D1FE64CB20026648C /* JJPictureUpViewController.h */,
 				AC03353E1FE64CB20026648C /* JJPictureUpViewController.m */,
+				ACBBFF481FEF9C6D00AF85EA /* JJArticleDetailViewController.h */,
+				ACBBFF491FEF9C6D00AF85EA /* JJArticleDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -648,6 +672,10 @@
 				AC03353B1FE64AA30026648C /* JJHomeDetailApi.m */,
 				AC0335401FE64D000026648C /* JJPictureUpApi.h */,
 				AC0335411FE64D000026648C /* JJPictureUpApi.m */,
+				ACBBFF421FEF7E2000AF85EA /* JJComposeArticalApi.h */,
+				ACBBFF431FEF7E2000AF85EA /* JJComposeArticalApi.m */,
+				ACBBFF451FEF9C5300AF85EA /* JJArticleDetailApi.h */,
+				ACBBFF461FEF9C5300AF85EA /* JJArticleDetailApi.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -658,6 +686,9 @@
 				D69A31971FD4FB46008A68D0 /* JJHomeTableViewCell.h */,
 				D69A31981FD4FB46008A68D0 /* JJHomeTableViewCell.m */,
 				D69A31991FD4FB46008A68D0 /* JJHomeTableViewCell.xib */,
+				ACBBFF4B1FEF9C8A00AF85EA /* JJArticleDetailTableViewCell.h */,
+				ACBBFF4C1FEF9C8A00AF85EA /* JJArticleDetailTableViewCell.m */,
+				ACBBFF4D1FEF9C8A00AF85EA /* JJArticleDetailTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -802,8 +833,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACBBFF411FEF515E00AF85EA /* JJComposeAritcleViewController.xib in Resources */,
 				D62AAEE81FC5434900662628 /* LaunchScreen.storyboard in Resources */,
 				D69A31CB1FD51E6C008A68D0 /* FSActionSheet_cancel@2x.png in Resources */,
+				ACBBFF4F1FEF9C8A00AF85EA /* JJArticleDetailTableViewCell.xib in Resources */,
 				D62AAEE51FC5434900662628 /* Assets.xcassets in Resources */,
 				D69A319B1FD4FB46008A68D0 /* JJHomeTableViewCell.xib in Resources */,
 				D69A31CC1FD51E6C008A68D0 /* FSActionSheet_cancel@3x.png in Resources */,
@@ -889,6 +922,7 @@
 				D62AAEE31FC5434900662628 /* HousePhoto.xcdatamodeld in Sources */,
 				D69A319E1FD51AD0008A68D0 /* JJHomeModel.m in Sources */,
 				D69A31CA1FD51E6C008A68D0 /* FSActionSheetItem.m in Sources */,
+				ACBBFF441FEF7E2000AF85EA /* JJComposeArticalApi.m in Sources */,
 				D62AAF611FC55B9B00662628 /* UIButton+CountDown.m in Sources */,
 				D69A31D31FD51E6C008A68D0 /* XLZoomingScrollView.m in Sources */,
 				D61AAAF21FC6707700EF8FC0 /* JJMJRefreshNoMoreDataFooter.m in Sources */,
@@ -904,8 +938,11 @@
 				D62AAEEB1FC5434900662628 /* main.m in Sources */,
 				D69A31DC1FD547A7008A68D0 /* JJBaseNav.m in Sources */,
 				D62AAEFA1FC5538C00662628 /* JJBaseNavigationController.m in Sources */,
+				ACBBFF4E1FEF9C8A00AF85EA /* JJArticleDetailTableViewCell.m in Sources */,
+				ACBBFF4A1FEF9C6D00AF85EA /* JJArticleDetailViewController.m in Sources */,
 				AC7A4F1A1FE610F100B68B3E /* JJLoginViewController.m in Sources */,
 				D62AAF641FC55B9B00662628 /* UIImage+Alpha.m in Sources */,
+				ACBBFF401FEF515E00AF85EA /* JJComposeAritcleViewController.m in Sources */,
 				D62AAF5D1FC55B9B00662628 /* NSString+Size.m in Sources */,
 				AC7A4F1E1FE6110700B68B3E /* JJLoginApi.m in Sources */,
 				D62AAEFD1FC5540E00662628 /* JJTabBarController.m in Sources */,
@@ -921,6 +958,7 @@
 				D69A31C91FD51E6C008A68D0 /* FSActionSheetConfig.m in Sources */,
 				D69A31D11FD51E6C008A68D0 /* XLPhotoBrowser.m in Sources */,
 				D62AAF6C1FC55B9B00662628 /* UINavigationController+StackManager.m in Sources */,
+				ACBBFF471FEF9C5300AF85EA /* JJArticleDetailApi.m in Sources */,
 				D62AAF061FC5549800662628 /* EXTRuntimeExtensions.m in Sources */,
 				D62AAF671FC55B9B00662628 /* UIImage+VideoPreview.m in Sources */,
 				D69A31C51FD51E6C008A68D0 /* UIImage+XLExtension.m in Sources */,

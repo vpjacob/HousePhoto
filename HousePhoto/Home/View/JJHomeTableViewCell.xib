@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,13 +24,6 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="103" id="AZX-8L-bl2"/>
                             <constraint firstAttribute="width" constant="103" id="YfF-h3-6JB"/>
-                        </constraints>
-                    </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="dc1-LP-wDO">
-                        <rect key="frame" x="135" y="103" width="103" height="103"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="103" id="enZ-py-zuo"/>
-                            <constraint firstAttribute="height" constant="103" id="tG1-wx-FAq"/>
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Vsw-B9-lME">
@@ -81,6 +74,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="dc1-LP-wDO">
+                        <rect key="frame" x="135" y="103" width="103" height="103"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="103" id="enZ-py-zuo"/>
+                            <constraint firstAttribute="height" constant="103" id="tG1-wx-FAq"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="acf-6G-Ufa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="20E-rj-alz"/>
@@ -98,6 +98,12 @@
                     <constraint firstItem="BIg-Yj-WLp" firstAttribute="top" secondItem="acf-6G-Ufa" secondAttribute="bottom" constant="9" id="rM3-Ib-TQM"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="img01" destination="BIg-Yj-WLp" id="AuK-Xs-hTm"/>
+                <outlet property="img02" destination="dc1-LP-wDO" id="TIb-P8-YZ1"/>
+                <outlet property="img03" destination="Vsw-B9-lME" id="T5F-hn-3yP"/>
+                <outlet property="name" destination="acf-6G-Ufa" id="UCR-Ww-zMr"/>
+            </connections>
             <point key="canvasLocation" x="-33.5" y="-17"/>
         </tableViewCell>
     </objects>

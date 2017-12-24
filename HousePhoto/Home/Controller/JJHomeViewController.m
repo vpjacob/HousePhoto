@@ -15,6 +15,8 @@
 #import "JJHomeModel.h"
 #import "JJDetailPicViewController.h"
 #import "JJPictureUpViewController.h"
+#import "JJComposeAritcleViewController.h"
+#import "JJArticleDetailViewController.h"
 
 @interface JJHomeViewController ()<XLPhotoBrowserDelegate,XLPhotoBrowserDatasource>
 @property(nonatomic, strong) GADInterstitial*interstitial;
@@ -59,16 +61,18 @@
 }
 
 - (void)netWorkWithPage:(NSInteger)page{
-    DLog(@"%zd",page);
+//    DLog(@"%zd",page);
     JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page pageSize:20];
     [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
         NSString *str = request.responseObject[@"info"];
         NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        DLog(@"%@-----su",dic);
-        DLog(@"%@-----su",request.responseObject);
+//        DLog(@"%@-----su",dic);
+//        DLog(@"%@-----su",request.responseObject);
         
         [self.dataSource addObjectsFromArray:[JJHomeModel changeJSONArray:dic[@"info"]]];
+        
+        [self.tableView reloadData];
         DLog(@"%@-----su",self.dataSource);
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         DLog(@"%@----fa----%zd",request,page);
@@ -94,19 +98,6 @@
 //    }];
 //}
 
-//- (void)netWorkWithPage:(NSInteger)page{
-//    JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page];
-//    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-//        DLog(@"%@-----su",request.responseData);
-//
-//    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
-//        DLog(@"%@----fa----%zd",request,page);
-//
-//        [self requestSuccess:YES requestEnd:NO];
-//        self.tableView.scrollsToTop = YES;
-//        [self.tableView.mj_footer endRefreshing];
-//    }];
-//}
 
 
 #pragma mark - datasorce&delegate
@@ -122,8 +113,10 @@
 //    [browser setActionSheetWithTitle:@"选择" delegate:self cancelButtonTitle:nil deleteButtonTitle:nil otherButtonTitles:@"发送给朋友",@"保存图片",@"收藏",@"投诉举报",nil];
 
 //    [self.navigationController pushViewController:[JJDetailPicViewController new] animated:YES];
-
-    [self.navigationController pushViewController:[JJPictureUpViewController new] animated:YES];
+    JJArticleDetailViewController *vc = [JJArticleDetailViewController new];
+    JJHomeModel *model = self.dataSource[indexPath.row];
+    vc.articleId = model.article_id;
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 
@@ -182,7 +175,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return self.dataSource.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -195,7 +188,11 @@
     if (cell == nil) {
         cell = [[NSBundle mainBundle] loadNibNamed:@"JJHomeTableViewCell" owner:self options:nil].lastObject;
     }
-    
+    JJHomeModel *model = self.dataSource[indexPath.row];
+    [cell.img01 setHidden:YES];
+    [cell.img02 setHidden:YES];
+    [cell.img03 setHidden:YES];
+    cell.model = model;
     return cell;
 }
 

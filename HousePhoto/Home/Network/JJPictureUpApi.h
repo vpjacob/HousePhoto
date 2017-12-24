@@ -10,4 +10,5 @@
 
 @interface JJPictureUpApi : JJBaseRequest
 - (instancetype)initWithImage:(UIImage *)image ;
+
 @end

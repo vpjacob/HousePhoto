@@ -40,7 +40,7 @@
 
 - (NSString *)requestUrl{
     
-    return [NSString stringWithFormat:@"%@/upload/uploadPic.do",kUrl];
+    return [NSString stringWithFormat:@"%@/iosupload/uploadPic.do",kUrl];
 }
 
 

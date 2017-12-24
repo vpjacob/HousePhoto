@@ -13,7 +13,7 @@
     NSString *_uid;
 }
 - (NSString *)requestUrl{
-    return [NSString stringWithFormat:@"%@/article/loadArticleInfo.do",kUrl];
+    return [NSString stringWithFormat:@"%@/iosarticle/loadArticleInfo.do",kUrl];
 }
 - (instancetype)initWithArticleId:(NSInteger)articleId{
     if (self == [super init]) {
