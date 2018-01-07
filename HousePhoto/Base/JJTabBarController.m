@@ -10,6 +10,8 @@
 #import "JJHomeViewController.h"
 #import "JJMeViewController.h"
 #import "JJBaseNavigationController.h"
+#import "JJPictureUpViewController.h"
+
 
 @interface JJTabBarController ()
 //@property (nonatomic, strong)
@@ -22,6 +24,7 @@
     // Do any additional setup after loading the view.
     
     [self creatVC:@"JJHomeViewController" selectedImgStr:@"tab_home" unSelectedImgStr:@"tab_home_un" title:@"首页"];
+    [self creatVC:@"JJPictureUpViewController" selectedImgStr:@"add_selected" unSelectedImgStr:@"add_unselected" title:@"添加"];
     [self creatVC:@"JJMeViewController" selectedImgStr:@"tab_me" unSelectedImgStr:@"tab_me_un" title:@"我的"];
 
 }

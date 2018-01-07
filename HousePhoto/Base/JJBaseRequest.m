@@ -68,11 +68,11 @@
 #pragma mark - Private Method
 - (NSInteger)getRequestStatuCode {
     NSDictionary *jsonDic = self.responseJSONObject;
-    return [[jsonDic objectForKey:@"code"] integerValue];
+    return [[jsonDic objectForKey:@"statusCode"] integerValue];
 }
 
 - (BOOL)statusCodeSuccess {
-    return [self getRequestStatuCode] == 200;
+    return [self getRequestStatuCode] == 1;
 }
 
 - (NSString *)errMessage {

@@ -62,41 +62,38 @@
 
 - (void)netWorkWithPage:(NSInteger)page{
 //    DLog(@"%zd",page);
-    JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page pageSize:20];
+    JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page pageSize:10];
     [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-        NSString *str = request.responseObject[@"info"];
-        NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
 //        DLog(@"%@-----su",dic);
-//        DLog(@"%@-----su",request.responseObject);
+        DLog(@"%@-----su",request.responseObject);
+        if (api.statusCodeSuccess) {
+            if (page == 1) {
+                [self.dataSource removeAllObjects];
+            }
+            NSString *str = request.responseObject[@"info"];
+            NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSArray *array = [JJHomeModel changeJSONArray:dic[@"info"]];
+            [self.dataSource addObjectsFromArray:array];
+            [self requestSuccess:YES requestEnd:array.count < 10?YES:NO];
+//            DLog(@"%@-----su",self.dataSource);
+            dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+            });
+            
+//            self.tableView.scrollsToTop = YES;
+        }else{
+            [self requestSuccess:NO requestEnd:NO];
+            
+        }
         
-        [self.dataSource addObjectsFromArray:[JJHomeModel changeJSONArray:dic[@"info"]]];
         
-        [self.tableView reloadData];
-        DLog(@"%@-----su",self.dataSource);
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
-        DLog(@"%@----fa----%zd",request,page);
-
-        [self requestSuccess:NO requestEnd:NO];
-        self.tableView.scrollsToTop = YES;
-        [self.tableView.mj_footer endRefreshing];
+        [self requestSuccess:NO requestEnd:YES];
     }];
 }
 
-
-//- (void)netWorkWithPage2:(NSInteger)page{
-//    JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page];
-//    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-//        DLog(@"%@-----su",request.responseData);
-//
-//    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
-//        DLog(@"%@----fa----%zd",request,page);
-//
-//        [self requestSuccess:NO requestEnd:NO];
-//        self.tableView.scrollsToTop = YES;
-//        [self.tableView.mj_footer endRefreshing];
-//    }];
-//}
 
 
 

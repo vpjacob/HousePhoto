@@ -13,8 +13,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *img01;
 @property (weak, nonatomic) IBOutlet UIImageView *img02;
 @property (weak, nonatomic) IBOutlet UIImageView *img03;
+@property (weak, nonatomic) IBOutlet UILabel *des;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 
 @property (nonatomic, strong)JJHomeModel *model;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end
