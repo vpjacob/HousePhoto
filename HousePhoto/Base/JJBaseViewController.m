@@ -41,7 +41,7 @@
 
 - (void)requestSuccess:(BOOL)success requestEnd:(BOOL)end {
     [self.tableView.mj_header endRefreshing];
-    
+    [self.tableView.mj_footer endRefreshing];
     if (end) {
         [self.tableView.mj_footer endRefreshingWithNoMoreData];
         [self.tableView reloadData];

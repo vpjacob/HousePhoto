@@ -54,9 +54,10 @@
     return _baseMuDic;
 }
 
-//- (NSString *)getAppdingURLString:(NSString *)urlstring{
-//    return [@"http://xk.ppke.cn:9030" stringByAppendingString:urlstring];
-//}
+- (NSString *)getAppdingURLString:(NSString *)urlstring{
+    return [kUrl stringByAppendingString:urlstring];
+//    return [NSString stringWithFormat:@"%@%@",kUrl,urlstring];
+}
 
 - (JJBaseRequestAccessory *)accessory {
     if (!_accessory) {
@@ -68,11 +69,11 @@
 #pragma mark - Private Method
 - (NSInteger)getRequestStatuCode {
     NSDictionary *jsonDic = self.responseJSONObject;
-    return [[jsonDic objectForKey:@"code"] integerValue];
+    return [[jsonDic objectForKey:@"statusCode"] integerValue];
 }
 
 - (BOOL)statusCodeSuccess {
-    return [self getRequestStatuCode] == 200;
+    return [self getRequestStatuCode] == 1;
 }
 
 - (NSString *)errMessage {

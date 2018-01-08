@@ -61,19 +61,30 @@
 }
 
 - (void)netWorkWithPage:(NSInteger)page{
-//    DLog(@"%zd",page);
-    JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page pageSize:20];
+    DLog(@"%zd",page);
+    JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page pageSize:10];
     [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-        NSString *str = request.responseObject[@"info"];
-        NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-//        DLog(@"%@-----su",dic);
-//        DLog(@"%@-----su",request.responseObject);
+        if (api.statusCodeSuccess) {
+            NSString *str = request.responseObject[@"info"];
+            NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            //        DLog(@"%@-----su",request.responseObject);
+            
+            if (page == 1) {
+                [self.dataSource removeAllObjects];
+            }
+            NSArray *array = [JJHomeModel changeJSONArray:dic[@"info"]];
+            [self.dataSource addObjectsFromArray:array];
+            
+//            [self.tableView reloadData];
+//            DLog(@"%@-----su",self.dataSource);
+            [self requestSuccess:YES requestEnd:array.count < 10 ? YES:NO];
+            
+        }else{
+            [self requestSuccess:NO requestEnd:YES];
+        }
         
-        [self.dataSource addObjectsFromArray:[JJHomeModel changeJSONArray:dic[@"info"]]];
         
-        [self.tableView reloadData];
-        DLog(@"%@-----su",self.dataSource);
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         DLog(@"%@----fa----%zd",request,page);
 
@@ -83,20 +94,6 @@
     }];
 }
 
-
-//- (void)netWorkWithPage2:(NSInteger)page{
-//    JJHomeApi *api = [[JJHomeApi alloc] initWithPage:page];
-//    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-//        DLog(@"%@-----su",request.responseData);
-//
-//    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
-//        DLog(@"%@----fa----%zd",request,page);
-//
-//        [self requestSuccess:NO requestEnd:NO];
-//        self.tableView.scrollsToTop = YES;
-//        [self.tableView.mj_footer endRefreshing];
-//    }];
-//}
 
 
 
@@ -188,6 +185,8 @@
     if (cell == nil) {
         cell = [[NSBundle mainBundle] loadNibNamed:@"JJHomeTableViewCell" owner:self options:nil].lastObject;
     }
+    DLog(@"%@-----su",self.dataSource[indexPath.row]);
+    DLog(@"%zd-----su",indexPath.row)
     JJHomeModel *model = self.dataSource[indexPath.row];
     [cell.img01 setHidden:YES];
     [cell.img02 setHidden:YES];

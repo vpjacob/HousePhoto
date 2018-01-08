@@ -26,7 +26,6 @@
 - (NSString *)requestUrl{
     
     return [NSString stringWithFormat:@"%@/iosarticle/loadArticleList.do",kUrl];
-    
 }
 
 - (id)requestArgument{
