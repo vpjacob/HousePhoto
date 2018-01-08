@@ -45,7 +45,8 @@
     }
     
     self.name.text = model.name;
-   
+    self.des.text = model.descriptions;
+    self.timeLabel.text = model.updateTime;
     
 }
 

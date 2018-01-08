@@ -44,14 +44,14 @@
     [self.tableView.mj_footer endRefreshing];
     if (end) {
         [self.tableView.mj_footer endRefreshingWithNoMoreData];
-        [self.tableView reloadData];
+//        [self.tableView reloadData];
         return;
     }
     if (!success && self.requestPage > 1) {
         self.requestPage -= 1;
     }
     else {
-        [self.tableView reloadData];
+//        [self.tableView reloadData];
     }
 }
 

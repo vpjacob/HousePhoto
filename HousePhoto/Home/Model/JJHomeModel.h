@@ -16,5 +16,6 @@
 @property (nonatomic, strong)NSString *name;
 @property (nonatomic, strong)NSString *previewImgUrls;
 @property (nonatomic, strong)NSString *updateTime;
+@property (nonatomic, strong)NSString *descriptions;
 
 @end
